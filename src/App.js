@@ -1,23 +1,26 @@
 import React, { Component } from 'react';
 
-import Navbar from './components/Navbar';
+import Header from './components/Header';
 import appCss from './App.css';
-import PostsContainer from './components/PostsContainer';
+import PostList from './components/PostList';
 
 class App extends Component {
     posts = [
-        { texto: 'Olá Mundo' },
-        { texto: 'Olá Mundo 1' },
-        { texto: 'Olá Mundo 2' },
-        { texto: 'Olá Mundo 3' },
-        { texto: 'Olá Mundo 4' },
+        {
+            user: {
+                name: 'Júlio Alcantara',
+                avatar: '',
+            },
+
+        }
+
     ];
     render() {
         return (
-            <div >
-                <Navbar />
-                <PostsContainer posts={this.posts} />
-            </div>
+            <>
+                <Header />
+                <PostList posts={this.posts} />
+            </>
         );
     }
 }
