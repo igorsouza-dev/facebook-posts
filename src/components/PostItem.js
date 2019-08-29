@@ -1,11 +1,18 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class PostItem extends Component {
-    render() {
-        return (
-            <div className="post">{this.props.texto}</div>
-        );
-    }
+  post = this.props.post;
+
+  render() {
+    return (
+      <div className="post">
+        <div className="post-author-section">
+          <img src={this.post.avatar} />
+        </div>
+        {this.post.content}
+      </div>
+    );
+  }
 }
 
 export default PostItem;
